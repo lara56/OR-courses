@@ -3,11 +3,18 @@ title: "OR courses"
 ---
 
 This is the sample page 
-```{r, echo = FALSE}
+```{r, include = FALSE}
+
 library(dplyr)
 library(tidyverse)
 data <- read_csv("example courses.csv")
-table(data)
+```
+```{r, results = 'asis', echo = FALSE}
+#cat(paste0("Course ",data[1,1]))
+for (i in 1:nrow(data)){
+  cat(paste0(" \n","Course ",data[i,1]," \n"))
+}
+
 ```
  
  
