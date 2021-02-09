@@ -3,16 +3,6 @@ title: "Trial"
 author: "Lara Spearman"
 date: "09/02/2021"
 
-output:
-  govdown::govdown_document:
-    font: "sans-serif" # (default) or "new-transport"
-    logo_url: "https://ukgovdatascience.github.io/govdown"
-    logo_text: "logo_text"
-    page_title: "page_title"
-    title: "title"
-    phase: alpha
-    feedback_url: "https://github.com/ukgovdatascience/govdown/issues"
-    google_analytics: "UA-12345678-90"
 ---
 
 ```{r setup, include=FALSE}
