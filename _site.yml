@@ -1,15 +1,9 @@
-output_dir: "." # to host on GitHub pages
-navbar: # links to include in the bar at the top of every page
-  - text: "Home"
-    href: index.html
-  - text: "Tech docs"
-    href: tech-docs.html
-  - text: "News"
-    href: NEWS.html
-output:
-  govdown::govdown_document:
-    font: "sans-serif" # (default) or "new-transport"
-    logo_text: "logo_text"
-    page_title: "page_title"
-    title: "title"
-    phase: alpha
+name: "OR-courses"  
+author: "Lara"  
+output_dir: "docs"  
+output:  
+  html_document:  
+    self_contained: no  
+    theme: flatly  
+navbar:  
+  title: "My First Webpage" 
