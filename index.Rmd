@@ -1,5 +1,13 @@
 ---
-
-title: "The trial website"
-
+title: "OR courses"
 ---
+
+This is the sample page 
+```{r, echo = FALSE}
+library(dplyr)
+library(tidyverse)
+data <- read_csv("example courses.csv")
+table(data)
+```
+ 
+ 
