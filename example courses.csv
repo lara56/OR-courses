@@ -1,5 +1,4 @@
-course,ranking,category
-a,4,general
-b,3,general
-c,4,specific
-a,5,general
+course,ranking,category,Cost,Description
+a,4,general,5,identify tests
+b,3,general,400,clean data
+c,4,specific,20,present wonderfully
