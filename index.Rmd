@@ -2,15 +2,21 @@
 title: "OR courses"
 ---
 
+<<<<<<< HEAD
 This is the page of OR courses
+=======
+This is the sample page, change
+>>>>>>> 6a182401a40d08b4f6b66a672c7cfbbf20b6d57d
 ```{r, include = FALSE}
 
 library(dplyr)
 library(tidyverse)
 data <- read_csv("example courses.csv")
 ```
+#General courses
 ```{r, results = 'asis', echo = FALSE}
 #cat(paste0("Course ",data[1,1]))
+<<<<<<< HEAD
 
 
 for (i in 1:nrow(data)){
@@ -21,11 +27,26 @@ for (i in 1:nrow(data)){
 
 ```{r, results = 'asis', echo = FALSE}
 ```
+=======
+if(data$category == "General"){
+data_gen <- data %>% filter(category == "General")
+for (i in 1:nrow(data)){
+  cat(paste0(" \n","Course ",data[i,1]," \n"))
+}
+}
+>>>>>>> 6a182401a40d08b4f6b66a672c7cfbbf20b6d57d
 
  ##Course 1 
 ```{r}
 av_rate <- data %>% filter(course == "a") %>% summarise( mean(ranking))
 cat(paste0(" \n","Ranking ",data[i,1]," \n"))
 ```
- 
- 
+ #Specific courses
+ ```
+ if(data$category == "Specific"){
+ data_spec <- data %>% filter(category == "Specific")
+for (i in 1:nrow(data_spec)){
+  cat(paste0(" \n","Course ",data_spec[i,1]," \n"))
+}
+}
+ ```
