@@ -9,12 +9,23 @@ library(dplyr)
 library(tidyverse)
 data <- read_csv("example courses.csv")
 ```
+#General courses
 ```{r, results = 'asis', echo = FALSE}
 #cat(paste0("Course ",data[1,1]))
+if(data$category == "General"){
+data_gen <- data %>% filter(category == "General")
 for (i in 1:nrow(data)){
   cat(paste0(" \n","Course ",data[i,1]," \n"))
 }
+}
 
 ```
- 
- 
+ #Specific courses
+ ```
+ if(data$category == "Specific"){
+ data_spec <- data %>% filter(category == "Specific")
+for (i in 1:nrow(data_spec)){
+  cat(paste0(" \n","Course ",data_spec[i,1]," \n"))
+}
+}
+ ```
