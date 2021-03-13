@@ -2,7 +2,7 @@
 title: "OR courses"
 ---
 
-This is the sample page 
+This is the page of OR courses
 ```{r, include = FALSE}
 
 library(dplyr)
@@ -11,10 +11,21 @@ data <- read_csv("example courses.csv")
 ```
 ```{r, results = 'asis', echo = FALSE}
 #cat(paste0("Course ",data[1,1]))
+
+
 for (i in 1:nrow(data)){
   cat(paste0(" \n","Course ",data[i,1]," \n"))
 }
+```
 
+
+```{r, results = 'asis', echo = FALSE}
+```
+
+ ##Course 1 
+```{r}
+av_rate <- data %>% filter(course == "a") %>% summarise( mean(ranking))
+cat(paste0(" \n","Ranking ",data[i,1]," \n"))
 ```
  
  
