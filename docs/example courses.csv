@@ -1,5 +1,5 @@
-course,ranking
-a,4
-b,3
-c,4
-a,5
+course,ranking,category
+a,4,general
+b,3, general
+c,4, specific
+a,5, general
