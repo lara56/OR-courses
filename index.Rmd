@@ -16,7 +16,7 @@ library(flair)
 #install.packages("remotes")
 #remotes::install_github("kbodwin/flair")
 
-data <- read_csv("example courses.csv")
+data <- read_csv("example courses3.csv")
 ```
 ::: {.accordion}
 ## General courses
@@ -28,8 +28,9 @@ data <- read_csv("example courses.csv")
 data_gen <- data %>% filter(category == "general") %>% filter(duplicated(course)==F)
 for (i in 1:nrow(data_gen)){
   cat(paste0(" \n","Course ",data_gen[i,1]," \n"))
-  cat(paste0(" \n","Cost: ",data_gen[i,4]," \n"))
-  cat(paste0(" \n","Description: ",data_gen[i,5]," \n"))
+  cat(paste0(" \n","Cost: ",data_gen[i,5]," \n"))
+  cat(paste0(" \n","Description: ",data_gen[i,6]," \n"))
+  cat(paste0(" \n","Link: ",data_gen[i,7]," \n"))
 }
 
 
@@ -44,16 +45,43 @@ for (i in 1:nrow(data_spec)){
   cat(paste0(" \n","Course ",data_spec[i,1]," \n"))
   cat(paste0(" \n","Cost: ",data_spec[i,4]," \n"))
   cat(paste0(" \n","Description: ",data_spec[i,5]," \n"))
+ # cat(paste0(("https://learn.civilservice.gov.uk/courses/PHP-Qf-ZS2CClCfkGDXLGQ")))
+  
+
 }
+
 
 
 ```
 
 :::
 
-```{r, echo = FALSE}
+```{r how_to_pipe}
+# iris %>% group_by(Species) %>%
+#   summarise(mean(Sepal.Length))
 
-# decorate('courses') %>%
-#   flair("course")
+```
+
+
+```{r, echo = FALSE}
+# decorate("how_to_pipe") %>%
+#   flair("%")
+
+```
+
+```{r lm, results = "asis", echo = FALSE}
+# "This model has a response variable, two predictors, and an interaction term." %>%
+#   flair("response variable", color = "deeppink") %>%
+#   flair("predictors", color = "cornflowerblue") %>%
+#   flair("interaction term", color = "orange") %>%
+#   flair_all(before = "<h4>", after = "</h4>") %>%
+#   cat()
+```
+
+```{r, echo = FALSE}
+# decorate("lm") %>%
+#   flair("Count", color = "deeppink") %>%
+#   flair("Gender:Year", color = "orange") %>%
+#   flair_rx("Gender |Year ", color = "cornflowerblue")
 
 ```
